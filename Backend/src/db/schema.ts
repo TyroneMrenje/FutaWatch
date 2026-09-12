@@ -10,7 +10,7 @@ import { sql } from 'drizzle-orm';
 export const trackedEvents = pgTable('tracked_events', {
   id: bigserial('id', { mode: 'number' }).primaryKey(),
 
-  title: varchar('title', { length: 255 }).notNull(), //match, fight , ufc
+  match: varchar('title', { length: 255 }).notNull(), //match, fight , ufc
 
   status: varchar('status', { length: 20 }).notNull().default('scheduled'),
 
